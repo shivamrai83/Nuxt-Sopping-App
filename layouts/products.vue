@@ -13,6 +13,7 @@
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/about">About</NuxtLink></li>
         <li><NuxtLink to="/products">Merch</NuxtLink></li>
+        <li><NuxtLink to="/products/cart">Cart</NuxtLink></li>
       </ul>
     </footer>
   </div>

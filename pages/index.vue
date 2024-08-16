@@ -6,8 +6,10 @@
 </template>
 
 <script setup>
-const arr = useState('array', () => [1,2,3])
-console.log('arr',arr.value.filter((val)=> val%2===1));
+// const arr = useState('array', () => [])
+// console.log('arr',arr.value.filter((val)=> val%2===1));
+const items = useState('items');
+console.log('items', items.value);
 </script>
 
 <style scoped>

@@ -10,11 +10,16 @@
           <h3 class="font-bold border-b-2 mb-4 pb-2">Product description:</h3>
           <p class="mb-7">{{ product.description }}</p>
 
-          <button class="btn flex">
+          <button 
+            :disabled="disable"
+            class="btn flex"
+            :class="{
+              'cursor-not-allowed bg-[#b7e8db] text-white px-3 py-2 rounded-md text-sm text-white inline-block;': disable
+            }"
+            @click="addItem">
             <i class="material-icons mr-2">add_shopping_cart</i>
             <span>Add to cart</span>
           </button>
-          <button @click="arr=[]"> add casssss</button>
         </div>
       </div>
     </div>
@@ -22,9 +27,17 @@
   
   <script setup>
     const { product } = defineProps(['product'])
-    const arr = useState('array');
-    const sam = arr;
-    console.log('arr in id', arr.value);
+   // Define state with an array
+    const items = useState('items', () => []);
+    const disable = ref(false);
+    // Function to add an item
+    const addItem = () => {
+        disable.value = true;
+        items.value.push(product);
+        console.log(items.value);
+        alert("item added")
+    };
+   
   </script>
   
   <style scoped>
