@@ -1,0 +1,1 @@
+# Nuxt-Sopping-App
